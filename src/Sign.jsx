@@ -11,6 +11,12 @@ function Sign() {
     navigate("/login");
   };
 
+  const handleSignup = () => {
+    // You can add signup logic here if needed
+    // For now, just redirect to login page after signup button click
+    navigate("/login");
+  };
+
   return (
     <div className="full">
       <div className="sign">
@@ -19,7 +25,10 @@ function Sign() {
         <input type="email" placeholder="EMAIL ID" />
         <input type="text" placeholder="VEHICLE NO" />
         <input type="text" placeholder="VEHICLE MODEL" />
-        <button>Sign up</button>
+        
+        {/* Updated Sign up button with onClick */}
+        <button onClick={handleSignup}>Sign up</button>
+        
         <div className="or">OR</div>
         <div className="social-icons">
           <a
